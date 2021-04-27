@@ -3,22 +3,25 @@ import styles from './List.scss';
 import Hero from '../Hero/Hero.js';
 import Column from '../Column/Column.js';
 import PropTypes from 'prop-types';
+import {settings} from '../../data/dataStore';
+import ReactHtmlParser from 'react-html-parser';
 
 class List extends React.Component {
   static propTypes = {
     title: PropTypes.node.isRequired,
-    children: PropTypes.node,
+    description: PropTypes.node,
+    columns: PropTypes.array,
   }
   static defaultProps = {
-    children: <p>I can do all the things!!!</p>,
+    description: settings.defaultListDescription,
   }
   render() {
     return (
       <section className={styles.component}>
-        <Hero titleText={this.props.title} photoImg={this.props.img} />
+        <Hero titleText={this.props.title} photoImg={this.props.image} />
 
         <div className={styles.description}>
-          {this.props.children}
+          {ReactHtmlParser(this.props.description)}
         </div>
 
         <div className={styles.columns}>
@@ -26,7 +29,7 @@ class List extends React.Component {
           <Column titleCol={'Plants'} />
           <Column titleCol={'Minerals'} />
         </div>
-        
+
       </section>
     )
   }
