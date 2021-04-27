@@ -3,10 +3,13 @@ import styles from './List.scss';
 import Hero from '../Hero/Hero.js';
 import Column from '../Column/Column.js';
 import PropTypes from 'prop-types';
-import {settings} from '../../data/dataStore';
+import {settings} from '../../data/dataStore.js';
 import ReactHtmlParser from 'react-html-parser';
 
 class List extends React.Component {
+  state = {
+    columns: this.props.columns || [],
+  }
   static propTypes = {
     title: PropTypes.node.isRequired,
     description: PropTypes.node,
@@ -15,6 +18,7 @@ class List extends React.Component {
   static defaultProps = {
     description: settings.defaultListDescription,
   }
+
   render() {
     return (
       <section className={styles.component}>
@@ -25,9 +29,9 @@ class List extends React.Component {
         </div>
 
         <div className={styles.columns}>
-          <Column titleCol={'Animals'} />
-          <Column titleCol={'Plants'} />
-          <Column titleCol={'Minerals'} />
+          {this.state.columns.map(({key, ...columnProps}) => (
+            <Column key={key} {...columnProps} />
+          ))}
         </div>
 
       </section>
