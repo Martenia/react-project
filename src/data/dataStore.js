@@ -10,6 +10,9 @@ export const settings = {
     defaultText: 'Search...',
     icon: 'search',
   },
+  header: { //new
+    icon: 'glass-cheers',
+  }, // new
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
 };
@@ -17,6 +20,18 @@ export const settings = {
 export const pageContents = {
   title: 'My first React app',
   subtitle: 'A simple to-do app, with lists, columns and cards',
+};
+
+export const infoData = {
+  title: 'Interesting things about Us!',
+  description: 'Mauris luctus arcu id nulla congue volutpat. Donec commodo tristique condimentum.',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+};
+
+export const faqData = {
+  title: 'Things to ask us about!',
+  description: 'Nam lobortis non neque et facilisis. Donec id odio at nisi condimentum sollicitudin sit amet cursus lectus.',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
 };
 
 export const listData = {
