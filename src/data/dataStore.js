@@ -94,6 +94,18 @@ const lists = [
     description: 'Interesting things I want to check out!',
     image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   },
+  {
+    id: 'list-2',
+    title: 'Donec rhoncus tortor eget turpis.',
+    description: 'Morbi imperdiet sem non ipsum varius faucibus.',
+    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  },
+  {
+    id: 'list-3',
+    title: 'Morbi vulputate turpis ac risus.',
+    description: 'Vestibulum placerat turpis vitae augue vehicula.',
+    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  },
 ];
 
 const columns = [
@@ -120,6 +132,18 @@ const columns = [
     listId: 'list-2',
     title: 'Strange column',
     icon: 'question',
+  },
+  {
+    id: 'column-5',
+    listId: 'list-2',
+    title: 'New column',
+    icon: 'film',
+  },
+  {
+    id: 'column-6',
+    listId: 'list-3',
+    title: 'Also Games',
+    icon: 'gamepad',
   },
 ];
 
